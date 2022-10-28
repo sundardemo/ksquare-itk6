@@ -14,3 +14,9 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+```
+git branch gorouter_nav && git checkout gorouter_nav && git add . && git commit -m "gorouter_nav" && git push --set-upstream origin gorouter_nav
+
+```

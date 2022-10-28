@@ -8,6 +8,8 @@ import 'package:myfirstapp/navigation/age-calculator.dart';
 import 'package:myfirstapp/navigation/result.dart';
 import 'package:myfirstapp/router_generator.dart';
 import 'package:myfirstapp/screens/container-test.dart';
+import 'package:myfirstapp/screens/popup_menu.dart';
+import 'package:myfirstapp/screens/url_example.dart';
 import 'package:myfirstapp/styles/theme.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
@@ -21,27 +23,27 @@ main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      theme: CustomTheme().theme,
-      routerConfig: router,
-    );
-  }
-
   // @override
   // Widget build(BuildContext context) {
-  //   return MaterialApp(
+  //   return MaterialApp.router(
   //     debugShowCheckedModeBanner: false,
   //     theme: CustomTheme().theme,
-  //     home: ContainerTest(),
-  //     initialRoute: '/',
-  //     // routes: {
-  //     //   '/': (context) => AgeCalculatorScreen(),
-  //     //   '/result': (context) => ResultScreen()
-  //     // },
-  //     onGenerateRoute: RouteGenerator().generateRoute,
+  //     routerConfig: router,
   //   );
   // }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: CustomTheme().theme,
+      home: PopUpMenuExample(),
+      //initialRoute: '/',
+      // routes: {
+      //   '/': (context) => AgeCalculatorScreen(),
+      //   '/result': (context) => ResultScreen()
+      // },
+      //onGenerateRoute: RouteGenerator().generateRoute,
+    );
+  }
 }
