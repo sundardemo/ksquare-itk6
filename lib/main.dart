@@ -4,6 +4,7 @@ import 'package:myfirstapp/go_router_example/page1.dart';
 import 'package:myfirstapp/go_router_example/page2.dart';
 import 'package:myfirstapp/go_router_example/page3.dart';
 import 'package:myfirstapp/go_router_example/router.dart';
+import 'package:myfirstapp/http_example/user_list.dart';
 import 'package:myfirstapp/navigation/age-calculator.dart';
 import 'package:myfirstapp/navigation/result.dart';
 import 'package:myfirstapp/router_generator.dart';
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: CustomTheme().theme,
-      home: PopUpMenuExample(),
+      home: UserList(),
       //initialRoute: '/',
       // routes: {
       //   '/': (context) => AgeCalculatorScreen(),
