@@ -17,6 +17,6 @@ samples, guidance on mobile development, and a full API reference.
 
 
 ```
-git branch gorouter_nav && git checkout gorouter_nav && git add . && git commit -m "gorouter_nav" && git push --set-upstream origin gorouter_nav
+git branch http_model_example && git checkout http_model_example && git add . && git commit -m "http_model_example" && git push --set-upstream origin http_model_example
 
 ```

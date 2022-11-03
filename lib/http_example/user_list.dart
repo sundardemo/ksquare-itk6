@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:myfirstapp/http_example/service.dart';
+import 'package:myfirstapp/http_example/user_model.dart';
 import 'constants.dart' as constants;
 
 class UserList extends StatefulWidget {
@@ -73,18 +74,19 @@ class _UserListState extends State<UserList> {
         body: FutureBuilder(
           future: UserService().fetchUserData(),
           builder: ((context, snapshot) {
+            print(snapshot);
             if (snapshot.hasData) {
-              var users = snapshot.data!;
+              List<User> users = snapshot.data!;
+              print(users);
               return ListView.builder(
                 itemCount: users.length,
                 itemBuilder: ((context, index) {
                   return ListTile(
                     leading: CircleAvatar(
-                      backgroundImage:
-                          NetworkImage("${users[index]['avatar']}"),
+                      backgroundImage: NetworkImage(users[index].avatar),
                     ),
-                    title: Text("${users[index]['first_name']}"),
-                    subtitle: Text("${users[index]['email']}"),
+                    title: Text(users[index].first_name),
+                    subtitle: Text(users[index].email),
                   );
                 }),
               );
